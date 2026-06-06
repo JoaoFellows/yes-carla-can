@@ -33,48 +33,48 @@ BS_:
 
 BU_: ECU
 
-BO_ 400 BRAKE: 4 ECU
+BO_ 1536 BRAKE: 4 ECU
  SG_ BRAKE_signal : 0|8@1+ (1,0) [0|255] "" ECU
 
-BO_ 401 STEER: 4 ECU
+BO_ 1537 STEER: 4 ECU
  SG_ STEER_signal : 0|8@1+ (1,0) [0|255] "" ECU
 
-BO_ 402 THROTTLE: 4 ECU
+BO_ 1538 THROTTLE: 4 ECU
  SG_ THROTTLE_signal : 0|8@1+ (1,0) [0|255] "" ECU
 
-BO_ 403 GEAR: 4 ECU
+BO_ 1539 GEAR: 4 ECU
  SG_ GEAR_signal : 0|8@1+ (1,0) [0|255] "" ECU
 
-BO_ 404 REVERSE: 1 ECU
+BO_ 1540 REVERSE: 1 ECU
  SG_ REVERSE_signal : 0|8@1+ (1,0) [0|255] "" ECU
 
-BO_ 405 HAND_BRAKE: 1 ECU
+BO_ 1541 HAND_BRAKE: 1 ECU
  SG_ HAND_BRAKE_signal : 0|8@1+ (1,0) [0|255] "" ECU
 
-BO_ 406 AUTOPILOT: 4 ECU
+BO_ 1542 AUTOPILOT: 4 ECU
  SG_ AUTOPILOT_signal : 0|8@1+ (1,0) [0|255] "" ECU
 
-BO_ 407 MANUAL_TRANSMISSION: 1 ECU
+BO_ 1543 MANUAL_TRANSMISSION: 1 ECU
  SG_ MANUAL_TRANSMISSION_signal : 0|8@1+ (1,0) [0|255] "" ECU
 
-BO_ 408 DOORS: 1 ECU
+BO_ 1548 DOORS: 1 ECU
  SG_ DOORS_signal : 0|8@1+ (1,0) [0|255] "" ECU
 
-BO_ 409 GENERAL_LIGHTS: 4 ECU
+BO_ 1549 GENERAL_LIGHTS: 4 ECU
  SG_ GENERAL_LIGHTS_signal : 0|8@1+ (1,0) [0|255] "" ECU
 
 BA_DEF_ BO_ "GenMsgCycleTime" INT 0 10000;
 
 BA_DEF_DEF_ "GenMsgCycleTime" 0;
 
-BA_ "GenMsgCycleTime" BO_ 400 10;
-BA_ "GenMsgCycleTime" BO_ 401 10;
-BA_ "GenMsgCycleTime" BO_ 402 10;
-BA_ "GenMsgCycleTime" BO_ 403 50;
-BA_ "GenMsgCycleTime" BO_ 404 50;
-BA_ "GenMsgCycleTime" BO_ 405 50;
-BA_ "GenMsgCycleTime" BO_ 406 100;
-BA_ "GenMsgCycleTime" BO_ 407 100;
-BA_ "GenMsgCycleTime" BO_ 408 0;
-BA_ "GenMsgCycleTime" BO_ 409 0;
+BA_ "GenMsgCycleTime" BO_ 1536 10;
+BA_ "GenMsgCycleTime" BO_ 1537 10;
+BA_ "GenMsgCycleTime" BO_ 1538 10;
+BA_ "GenMsgCycleTime" BO_ 1539 50;
+BA_ "GenMsgCycleTime" BO_ 1540 50;
+BA_ "GenMsgCycleTime" BO_ 1541 50;
+BA_ "GenMsgCycleTime" BO_ 1542 100;
+BA_ "GenMsgCycleTime" BO_ 1543 100;
+BA_ "GenMsgCycleTime" BO_ 1548 0;
+BA_ "GenMsgCycleTime" BO_ 1549 0;
 
