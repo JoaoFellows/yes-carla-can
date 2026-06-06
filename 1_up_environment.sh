@@ -75,7 +75,7 @@ sleep 5
 
 # Start CARLA client module in the background
 echo "Starting CARLA client module..."
-conda run -n "${CONDA_ENV_NAME}" python "${SCRIPT_DIR}/CARLA_client_module.py" --vcan "${VCAN_INTERFACE}" &
+conda run -n "${CONDA_ENV_NAME}" python "${SCRIPT_DIR}/CARLA_client_module.py" --dbc "${DBC_PATH}" --vcan "${VCAN_INTERFACE}" &
 
 # Start vehicle controls module in the background
 echo "Starting vehicle controls module..."

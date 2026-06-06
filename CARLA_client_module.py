@@ -50,7 +50,7 @@ def game_loop(args):
 
     world = None
     original_settings = None
-    can_bus = CAN_Network(channel=args.vcan)
+    can_bus = CAN_Network(dbc_path=args.dbc, channel=args.vcan)
     can_display = CANTrafficDisplay(channel=args.vcan)
 
     try:
@@ -200,6 +200,11 @@ def main():
         "--vcan",
         default=VCAN_CHANNEL,
         help=f"Virtual CAN interface name (default: {VCAN_CHANNEL})",
+    )
+    argparser.add_argument(
+        "--dbc",
+        default="data/carla.dbc",
+        help="Path to the DBC file (default: data/carla.dbc)",
     )
     args = argparser.parse_args()
 

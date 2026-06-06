@@ -104,15 +104,17 @@ class CAN_Network(object):
         except can.CanOperationError:
             return self.recvd_controls
         while recv_msg is not None:
-            data = self.db.decode_message(recv_msg.arbitration_id, recv_msg.data)
-
             try:
                 dbc_msg = self.db.get_message_by_frame_id(recv_msg.arbitration_id)
             except KeyError:
                 print(f"[CAN] INFO: Received unknown arbitration_id 0x{recv_msg.arbitration_id:X}, skipping")
-                recv_msg = self.bus.recv(timeout=0)
+                try:
+                    recv_msg = self.bus.recv(timeout=0)
+                except can.CanOperationError:
+                    break
                 continue
 
+            data = self.db.decode_message(recv_msg.arbitration_id, recv_msg.data)
             name = dbc_msg.name
 
             if name == "THROTTLE":
